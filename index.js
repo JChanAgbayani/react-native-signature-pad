@@ -1,9 +1,9 @@
 'use strict';
 
-import {Component} from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-import {StyleSheet, View, WebView,} from 'react-native';
+import {StyleSheet, View, WebView} from 'react-native';
 
 
 import htmlContent from './injectedHtml';
@@ -116,20 +116,15 @@ class SignaturePad extends Component {
     render = () => {
         return (
             < WebView
-        automaticallyAdjustContentInsets = {false}
-        onNavigationStateChange = {this._onNavigationChange
-    }
-        renderError = {this._renderError
-    }
-        renderLoading = {this._renderLoading
-    }
-        source = {this.source
-    }
-        javaScriptEnabled = {true}
-        style = {this.props.style
-    }
-        />
-    )
+                automaticallyAdjustContentInsets={false}
+                onNavigationStateChange={this._onNavigationChange}
+                renderError={this._renderError}
+                renderLoading={this._renderLoading}
+                source={this.source}
+                javaScriptEnabled={true}
+                style={this.props.style}
+            />
+        )
     };
 }
 
